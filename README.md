@@ -8,7 +8,7 @@ Ver `CLAUDE.md` para las decisiones de producto.
 | Fase | Contenido | Estado |
 |---|---|---|
 | 1 | Motor de tests + CCSE completo en español | ✅ Hecho |
-| 2 | Traducción de explicaciones (ar, en, fr, ur) + RTL | 🟡 Interfaz y RTL hechos; explicaciones pendientes de traducir |
+| 2 | Traducción de explicaciones (ar, en, fr, ur) + RTL | ✅ Hecho — **árabe y urdu pendientes de revisión por un nativo** |
 | 3 | DELE A2: lectora y auditiva | ⏳ |
 | 4 | DELE A2: escrita y oral | ⏳ |
 | 5 | Pagos Google Play y paywall | 🟡 `BillingService` hecho; paywall desactivado (`FeatureFlags.DeleAvailable`) |
@@ -85,8 +85,9 @@ que las preguntas que desaparecen dejan de contar en las estadísticas automáti
 
 ## Traducir explicaciones
 
-Crear `tools/ccse/explicaciones_en.tsv` (y `fr`, `ar`, `ur`) con el mismo formato que `explicaciones_es.tsv`
-y volver a ejecutar el script. Las de árabe y urdu las tiene que revisar un nativo antes del lanzamiento.
+Están en `tools/ccse/explicaciones_<idioma>.tsv` (es, en, fr, ar, ur), mismo formato que `explicaciones_es.tsv`
+(las líneas que empiezan por `#` son comentarios). Tras editarlas, volver a ejecutar el script.
+Las de árabe y urdu las tiene que revisar un nativo antes del lanzamiento.
 
 ## Pagos (fase 5)
 
