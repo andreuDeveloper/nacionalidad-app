@@ -1,5 +1,6 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using System.Text.Json.Serialization.Metadata;
 using ExamEngine.Core.Models;
 
 namespace ExamEngine.Core.Loading;
@@ -21,14 +22,18 @@ public static class QuestionBankLoader
         WriteIndented = true,
         DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
         Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
+        TypeInfoResolver = BankJsonContext.Default,
     };
+
+    private static JsonTypeInfo<QuestionBank> BankTypeInfo =>
+        (JsonTypeInfo<QuestionBank>)JsonOptions.GetTypeInfo(typeof(QuestionBank));
 
     public static async Task<QuestionBank> LoadAsync(Stream stream, CancellationToken cancellationToken = default)
     {
         QuestionBank? bank;
         try
         {
-            bank = await JsonSerializer.DeserializeAsync<QuestionBank>(stream, JsonOptions, cancellationToken).ConfigureAwait(false);
+            bank = await JsonSerializer.DeserializeAsync(stream, BankTypeInfo, cancellationToken).ConfigureAwait(false);
         }
         catch (JsonException ex)
         {
@@ -42,7 +47,7 @@ public static class QuestionBankLoader
         QuestionBank? bank;
         try
         {
-            bank = JsonSerializer.Deserialize<QuestionBank>(json, JsonOptions);
+            bank = JsonSerializer.Deserialize(json, BankTypeInfo);
         }
         catch (JsonException ex)
         {
@@ -51,7 +56,7 @@ public static class QuestionBankLoader
         return Validate(bank);
     }
 
-    public static string Serialize(QuestionBank bank) => JsonSerializer.Serialize(bank, JsonOptions);
+    public static string Serialize(QuestionBank bank) => JsonSerializer.Serialize(bank, BankTypeInfo);
 
     private static QuestionBank Validate(QuestionBank? bank)
     {

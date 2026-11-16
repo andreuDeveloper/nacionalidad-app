@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using SQLite;
 
 namespace Nacionalidad.App.Data;
@@ -18,6 +19,9 @@ public sealed class AppDatabase
 
     public AppDatabase(string path) => _path = path;
 
+    // sqlite-net mapea las tablas por reflexión: se protegen sus propiedades del recorte (trimming) en Release.
+    [DynamicDependency(DynamicallyAccessedMemberTypes.All, typeof(AnswerRow))]
+    [DynamicDependency(DynamicallyAccessedMemberTypes.All, typeof(SessionRow))]
     public async Task<SQLiteAsyncConnection> GetAsync()
     {
         if (_connection is not null) return _connection;

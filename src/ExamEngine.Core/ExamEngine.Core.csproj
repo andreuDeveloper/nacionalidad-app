@@ -5,6 +5,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <RootNamespace>ExamEngine.Core</RootNamespace>
+    <!-- Se usa en apps móviles recortadas (trimming/AOT): el analizador avisa de cualquier reflexión. -->
+    <IsTrimmable>true</IsTrimmable>
+    <IsAotCompatible>true</IsAotCompatible>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <NoWarn>$(NoWarn);CS1591;CS1573</NoWarn>
     <Description>Motor genérico de tests de examen: bancos de preguntas en JSON versionado, simulacros, puntuación, repaso de fallos y estadísticas. Sin dependencias de MAUI ni de ningún examen concreto.</Description>
