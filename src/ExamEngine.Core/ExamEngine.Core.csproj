@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>ExamEngine.Core</RootNamespace>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591;CS1573</NoWarn>
+    <Description>Motor genérico de tests de examen: bancos de preguntas en JSON versionado, simulacros, puntuación, repaso de fallos y estadísticas. Sin dependencias de MAUI ni de ningún examen concreto.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="ExamEngine.Core.Tests" />
+  </ItemGroup>
+
+</Project>
