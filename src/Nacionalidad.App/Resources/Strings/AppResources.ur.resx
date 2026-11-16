@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="AppName" xml:space="preserve"><value>ہسپانوی شہریت</value></data>
+  <data name="Tab_Home" xml:space="preserve"><value>ہوم</value></data>
+  <data name="Tab_Stats" xml:space="preserve"><value>پیش رفت</value></data>
+  <data name="Tab_Settings" xml:space="preserve"><value>ترتیبات</value></data>
+  <data name="Home_Greeting" xml:space="preserve"><value>ہسپانوی شہریت کی تیاری کریں</value></data>
+  <data name="Home_Subtitle" xml:space="preserve"><value>آپ کو درکار دو امتحانات: CCSE اور DELE A2۔</value></data>
+  <data name="Home_CcseDesc" xml:space="preserve"><value>اسپین کے آئینی اور سماجی و ثقافتی معلومات۔ سرکاری کتابچے کے تمام 300 سوالات، وضاحت کے ساتھ۔</value></data>
+  <data name="Home_Free" xml:space="preserve"><value>مفت</value></data>
+  <data name="Home_DeleDesc" xml:space="preserve"><value>انسٹیٹیوٹو سروانٹیس کا ہسپانوی زبان کا امتحان: پڑھنا، سننا، لکھنا اور بولنا۔</value></data>
+  <data name="Home_Soon" xml:space="preserve"><value>جلد آ رہا ہے</value></data>
+  <data name="Home_Readiness" xml:space="preserve"><value>CCSE کے لیے آپ کی تیاری: {0}</value></data>
+  <data name="Common_Start" xml:space="preserve"><value>شروع کریں</value></data>
+  <data name="Common_Yes" xml:space="preserve"><value>ہاں</value></data>
+  <data name="Common_No" xml:space="preserve"><value>نہیں</value></data>
+  <data name="Common_Ok" xml:space="preserve"><value>ٹھیک ہے</value></data>
+  <data name="Common_Cancel" xml:space="preserve"><value>منسوخ کریں</value></data>
+  <data name="Common_Error" xml:space="preserve"><value>خرابی</value></data>
+  <data name="Common_Loading" xml:space="preserve"><value>لوڈ ہو رہا ہے…</value></data>
+  <data name="Ccse_MockTitle" xml:space="preserve"><value>فرضی امتحان</value></data>
+  <data name="Ccse_MockDesc" xml:space="preserve"><value>{0} سوالات · {1} منٹ · {2} درست جوابات پر کامیابی، بالکل اصل امتحان کی طرح۔</value></data>
+  <data name="Ccse_MockStart" xml:space="preserve"><value>فرضی امتحان شروع کریں</value></data>
+  <data name="Ccse_ReviewTitle" xml:space="preserve"><value>غلطیوں کا اعادہ</value></data>
+  <data name="Ccse_ReviewDesc" xml:space="preserve"><value>{0} سوالات اعادے کے منتظر ہیں۔</value></data>
+  <data name="Ccse_ReviewEmpty" xml:space="preserve"><value>کوئی زیر التوا غلطی نہیں۔ جن سوالات کا جواب غلط ہو وہ یہاں تب تک رہیں گے جب تک آپ لگاتار دو بار درست جواب نہ دیں۔</value></data>
+  <data name="Ccse_ReviewStart" xml:space="preserve"><value>اعادہ کریں</value></data>
+  <data name="Ccse_PracticeTitle" xml:space="preserve"><value>حصوں کے لحاظ سے مشق</value></data>
+  <data name="Ccse_PracticeAll" xml:space="preserve"><value>تمام سوالات (بلا ترتیب)</value></data>
+  <data name="Ccse_Task" xml:space="preserve"><value>حصہ {0}</value></data>
+  <data name="Ccse_TaskProgress" xml:space="preserve"><value>{1} میں سے {0} دیکھے · {2} درست</value></data>
+  <data name="Cat_tarea1" xml:space="preserve"><value>حکومت، قانون سازی اور شہری شرکت</value></data>
+  <data name="Cat_tarea2" xml:space="preserve"><value>بنیادی حقوق اور فرائض</value></data>
+  <data name="Cat_tarea3" xml:space="preserve"><value>علاقائی تنظیم اور جغرافیہ</value></data>
+  <data name="Cat_tarea4" xml:space="preserve"><value>اسپین کی ثقافت اور تاریخ</value></data>
+  <data name="Cat_tarea5" xml:space="preserve"><value>ہسپانوی معاشرہ</value></data>
+  <data name="Quiz_Progress" xml:space="preserve"><value>سوال {0} از {1}</value></data>
+  <data name="Quiz_Next" xml:space="preserve"><value>اگلا</value></data>
+  <data name="Quiz_Previous" xml:space="preserve"><value>پچھلا</value></data>
+  <data name="Quiz_Finish" xml:space="preserve"><value>ختم کریں</value></data>
+  <data name="Quiz_Submit" xml:space="preserve"><value>جمع کرائیں</value></data>
+  <data name="Quiz_Correct" xml:space="preserve"><value>درست!</value></data>
+  <data name="Quiz_Incorrect" xml:space="preserve"><value>غلط</value></data>
+  <data name="Quiz_CorrectAnswerIs" xml:space="preserve"><value>درست جواب: {0}</value></data>
+  <data name="Quiz_Explanation" xml:space="preserve"><value>وضاحت</value></data>
+  <data name="Quiz_ExplanationOnlySpanish" xml:space="preserve"><value>یہ وضاحت ابھی ترجمہ نہیں ہوئی، اس لیے ہسپانوی میں دکھائی جا رہی ہے۔</value></data>
+  <data name="Quiz_Answered" xml:space="preserve"><value>{1} میں سے {0} کے جواب دیے</value></data>
+  <data name="Quiz_ConfirmExitTitle" xml:space="preserve"><value>باہر نکلیں؟</value></data>
+  <data name="Quiz_ConfirmExitMock" xml:space="preserve"><value>اگر آپ ابھی نکلے تو یہ فرضی امتحان ضائع ہو جائے گا۔</value></data>
+  <data name="Quiz_ConfirmExitPractice" xml:space="preserve"><value>آپ کے جوابات محفوظ ہو چکے ہیں۔ کیا آپ ابھی ختم کرنا چاہتے ہیں؟</value></data>
+  <data name="Quiz_ConfirmSubmitTitle" xml:space="preserve"><value>امتحان جمع کرائیں؟</value></data>
+  <data name="Quiz_ConfirmSubmitText" xml:space="preserve"><value>آپ نے {1} میں سے {0} سوالات کے جواب دیے ہیں۔</value></data>
+  <data name="Quiz_TimeUpTitle" xml:space="preserve"><value>وقت ختم</value></data>
+  <data name="Quiz_TimeUpText" xml:space="preserve"><value>امتحان خود بخود جمع کر دیا گیا ہے۔</value></data>
+  <data name="Quiz_MockHint" xml:space="preserve"><value>جمع کرانے تک آپ جوابات بدل سکتے ہیں۔ نتیجہ آخر میں دکھایا جائے گا۔</value></data>
+  <data name="Result_Passed" xml:space="preserve"><value>کامیاب</value></data>
+  <data name="Result_Failed" xml:space="preserve"><value>ناکام</value></data>
+  <data name="Result_Score" xml:space="preserve"><value>{1} میں سے {0} درست</value></data>
+  <data name="Result_PassMark" xml:space="preserve"><value>کامیابی کے لیے {0} درست جوابات درکار ہیں۔</value></data>
+  <data name="Result_PracticeDone" xml:space="preserve"><value>مشق مکمل</value></data>
+  <data name="Result_Duration" xml:space="preserve"><value>لگنے والا وقت: {0}</value></data>
+  <data name="Result_ByTask" xml:space="preserve"><value>حصوں کے لحاظ سے نتائج</value></data>
+  <data name="Result_Mistakes" xml:space="preserve"><value>غلط جواب والے سوالات</value></data>
+  <data name="Result_NoMistakes" xml:space="preserve"><value>کوئی غلطی نہیں۔ زبردست!</value></data>
+  <data name="Result_YourAnswer" xml:space="preserve"><value>آپ کا جواب: {0}</value></data>
+  <data name="Result_NoAnswer" xml:space="preserve"><value>جواب نہیں دیا</value></data>
+  <data name="Result_ReviewMistakes" xml:space="preserve"><value>ان غلطیوں کا اعادہ کریں</value></data>
+  <data name="Result_Again" xml:space="preserve"><value>ایک اور فرضی امتحان</value></data>
+  <data name="Result_Home" xml:space="preserve"><value>واپس</value></data>
+  <data name="Stats_Title" xml:space="preserve"><value>CCSE میں آپ کی پیش رفت</value></data>
+  <data name="Stats_Readiness" xml:space="preserve"><value>اندازاً تیاری</value></data>
+  <data name="Stats_ReadinessHint" xml:space="preserve"><value>ان سوالات کو جو آپ کو آ چکے ہیں (لگاتار 3 درست جوابات) اور آخری فرضی امتحان کے نمبروں کو ملا کر۔</value></data>
+  <data name="Stats_Seen" xml:space="preserve"><value>دیکھے گئے</value></data>
+  <data name="Stats_Mastered" xml:space="preserve"><value>آ چکے</value></data>
+  <data name="Stats_Accuracy" xml:space="preserve"><value>درستگی</value></data>
+  <data name="Stats_Pending" xml:space="preserve"><value>اعادے کے لیے</value></data>
+  <data name="Stats_Mocks" xml:space="preserve"><value>فرضی امتحانات</value></data>
+  <data name="Stats_MocksPassed" xml:space="preserve"><value>{1} میں سے {0} میں کامیاب</value></data>
+  <data name="Stats_LastMock" xml:space="preserve"><value>آخری: {0}</value></data>
+  <data name="Stats_Streak" xml:space="preserve"><value>مسلسل مطالعہ</value></data>
+  <data name="Stats_StreakDays" xml:space="preserve"><value>لگاتار {0} دن</value></data>
+  <data name="Stats_ByTask" xml:space="preserve"><value>حصوں کے لحاظ سے</value></data>
+  <data name="Stats_Empty" xml:space="preserve"><value>آپ نے ابھی تک کسی سوال کا جواب نہیں دیا۔ مشق شروع کریں!</value></data>
+  <data name="Stats_Reset" xml:space="preserve"><value>میری CCSE پیش رفت حذف کریں</value></data>
+  <data name="Stats_ResetConfirm" xml:space="preserve"><value>آپ کے تمام جوابات اور فرضی امتحانات حذف ہو جائیں گے۔ یہ عمل واپس نہیں ہو سکتا۔</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>زبان</value></data>
+  <data name="Settings_LanguageHint" xml:space="preserve"><value>ایپ اور وضاحتوں کی زبان۔ سوالات ہمیشہ ہسپانوی میں ہوتے ہیں، جیسے اصل امتحان میں۔</value></data>
+  <data name="Settings_About" xml:space="preserve"><value>ایپ کے بارے میں</value></data>
+  <data name="Settings_AboutText" xml:space="preserve"><value>CCSE کے سوالات انسٹیٹیوٹو سروانٹیس کے شائع کردہ CCSE 2026 تیاری کتابچے سے لیے گئے ہیں۔ وضاحتیں ہماری اپنی ہیں۔ یہ ایپ آزاد ہے اور اس کا انسٹیٹیوٹو سروانٹیس سے کوئی سرکاری تعلق نہیں۔</value></data>
+  <data name="Settings_Version" xml:space="preserve"><value>ورژن {0}</value></data>
+  <data name="Settings_ContentVersion" xml:space="preserve"><value>CCSE سوالات کا ذخیرہ: {0}</value></data>
+  <data name="Settings_Purchases" xml:space="preserve"><value>خریداریاں</value></data>
+  <data name="Settings_Restore" xml:space="preserve"><value>خریداریاں بحال کریں</value></data>
+  <data name="Settings_RestoreNone" xml:space="preserve"><value>اس Google Play اکاؤنٹ پر کوئی خریداری نہیں ملی۔</value></data>
+  <data name="Settings_RestoreOk" xml:space="preserve"><value>DELE A2 پاس بحال ہو گیا۔ شکریہ!</value></data>
+  <data name="Settings_DeleOwned" xml:space="preserve"><value>آپ کے پاس DELE A2 پاس ہے۔</value></data>
+  <data name="Dele_Intro" xml:space="preserve"><value>DELE A2 پاس میں ہسپانوی امتحان پاس کرنے کے لیے ضروری سب کچھ ہوگا:</value></data>
+  <data name="Dele_FeatureReading" xml:space="preserve"><value>خودکار جانچ کے ساتھ پڑھ کر سمجھنا</value></data>
+  <data name="Dele_FeatureListening" xml:space="preserve"><value>قابلِ تبدیل رفتار والی آڈیو کے ساتھ سن کر سمجھنا</value></data>
+  <data name="Dele_FeatureWriting" xml:space="preserve"><value>نمونہ متون اور خود جائزے کے ساتھ تحریر</value></data>
+  <data name="Dele_FeatureSpeaking" xml:space="preserve"><value>بولنا: اپنا جواب ریکارڈ کریں اور نمونے سے موازنہ کریں</value></data>
+  <data name="Dele_FeatureExams" xml:space="preserve"><value>5 مکمل نمونہ امتحانات</value></data>
+  <data name="Dele_FeaturePlan" xml:space="preserve"><value>آپ کی امتحان کی تاریخ کے مطابق مطالعے کا منصوبہ</value></data>
+  <data name="Dele_Price" xml:space="preserve"><value>ایک بار ادائیگی۔ نہ سبسکرپشن نہ اشتہارات۔ آف لائن کام کرتی ہے۔</value></data>
+  <data name="Dele_Soon" xml:space="preserve"><value>ہم DELE A2 کا مواد تیار کر رہے ہیں۔ تب تک CCSE کی مفت تیاری کریں۔</value></data>
+  <data name="Dele_GoCcse" xml:space="preserve"><value>CCSE پر جائیں</value></data>
+  <data name="Error_LoadBank" xml:space="preserve"><value>سوالات کا ذخیرہ لوڈ نہیں ہو سکا۔</value></data>
+</root>

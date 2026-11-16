@@ -39,9 +39,20 @@ nacionalidad-app/
 ├── src/
 │   ├── ExamEngine.Core/       # Biblioteca .NET genérica y reutilizable
 │   └── Nacionalidad.App/      # App .NET MAUI (CCSE + DELE A2)
-└── tests/
-    └── ExamEngine.Core.Tests/ # Tests unitarios del motor (xUnit)
+├── tests/
+│   └── ExamEngine.Core.Tests/ # Tests unitarios del motor (xUnit); también valida los JSON de Content/
+└── tools/
+    ├── ccse/                  # build_ccse_bank.py (PDF -> Content/ccse.json) + explicaciones_<idioma>.tsv
+    └── i18n/                  # check_resx.py: mismas claves y marcadores en los 5 .resx
 ```
+
+### Convenciones
+- El banco del CCSE (`Content/ccse.json`) **se genera** con `tools/ccse/build_ccse_bank.py`; no editarlo a mano.
+  Las explicaciones se escriben en `tools/ccse/explicaciones_<idioma>.tsv`.
+- Ids de pregunta estables (`ccse-1001`): el progreso del usuario se guarda por id.
+- Textos de la interfaz: siempre en los 5 `.resx` (`Resources/Strings`); en XAML con `{loc:Tr Clave}`,
+  en C# con `Translator.Instance["Clave"]`. Comprobar con `tools/i18n/check_resx.py`.
+- Las preguntas se muestran siempre en español y `FlowDirection="LeftToRight"`, también con interfaz RTL.
 
 ### ExamEngine.Core (biblioteca de clases .NET, sin dependencias de MAUI)
 - Motor de tests genérico: modelos de pregunta/examen, simulacros, puntuación, repaso de fallos y estadísticas.

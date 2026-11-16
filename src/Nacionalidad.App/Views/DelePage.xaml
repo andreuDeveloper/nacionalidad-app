@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Nacionalidad.App.ViewModels"
+             xmlns:loc="clr-namespace:Nacionalidad.App.Localization"
+             x:Class="Nacionalidad.App.Views.DelePage"
+             x:DataType="vm:DeleViewModel"
+             Title="DELE A2">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="16">
+
+            <Label Text="DELE A2" Style="{StaticResource Title}" />
+            <Label Text="{loc:Tr Dele_Intro}" />
+
+            <Border Style="{StaticResource Card}">
+                <VerticalStackLayout Spacing="10" BindableLayout.ItemsSource="{Binding Features}">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate x:DataType="x:String">
+                            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="10">
+                                <Label Text="✓" FontAttributes="Bold" TextColor="{StaticResource Success}" />
+                                <Label Grid.Column="1" Text="{Binding .}" />
+                            </Grid>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </VerticalStackLayout>
+            </Border>
+
+            <Label Text="{loc:Tr Dele_Price}" Style="{StaticResource Soft}" />
+
+            <Border Style="{StaticResource Card}" IsVisible="{Binding IsAvailable, Converter={StaticResource Not}}">
+                <VerticalStackLayout Spacing="12">
+                    <Border BackgroundColor="{StaticResource Accent}" StrokeThickness="0" StrokeShape="RoundRectangle 8"
+                            Padding="10,4" HorizontalOptions="Start">
+                        <Label Text="{loc:Tr Home_Soon}" TextColor="{StaticResource OnAccent}" FontSize="12" FontAttributes="Bold" />
+                    </Border>
+                    <Label Text="{loc:Tr Dele_Soon}" />
+                    <Button Text="{loc:Tr Dele_GoCcse}" Command="{Binding GoCcseCommand}" />
+                </VerticalStackLayout>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

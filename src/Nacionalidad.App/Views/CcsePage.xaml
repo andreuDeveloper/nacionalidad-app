@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Nacionalidad.App.ViewModels"
+             xmlns:loc="clr-namespace:Nacionalidad.App.Localization"
+             x:Class="Nacionalidad.App.Views.CcsePage"
+             x:DataType="vm:CcseViewModel"
+             Title="CCSE 2026">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="16">
+
+            <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />
+
+            <!-- Simulacro -->
+            <Border Style="{StaticResource Card}">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="{loc:Tr Ccse_MockTitle}" Style="{StaticResource Subtitle}" />
+                    <Label Text="{Binding MockDescription}" Style="{StaticResource Soft}" />
+                    <Button Text="{loc:Tr Ccse_MockStart}" Command="{Binding StartMockCommand}" />
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Repaso de fallos -->
+            <Border Style="{StaticResource Card}">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="{loc:Tr Ccse_ReviewTitle}" Style="{StaticResource Subtitle}" />
+                    <Label Text="{Binding ReviewDescription}" Style="{StaticResource Soft}" />
+                    <Button Text="{loc:Tr Ccse_ReviewStart}" Style="{StaticResource SecondaryButton}"
+                            Command="{Binding StartReviewCommand}" IsVisible="{Binding HasPending}" />
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Práctica por tareas -->
+            <Label Text="{loc:Tr Ccse_PracticeTitle}" Style="{StaticResource Subtitle}" Margin="0,8,0,0" />
+
+            <VerticalStackLayout Spacing="12" BindableLayout.ItemsSource="{Binding Categories}">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate x:DataType="vm:CategoryItem">
+                        <Border Style="{StaticResource Card}">
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding StartPracticeCommand, Source={RelativeSource AncestorType={x:Type vm:CcseViewModel}}, x:DataType=vm:CcseViewModel}"
+                                                      CommandParameter="{Binding .}" />
+                            </Border.GestureRecognizers>
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="{Binding Header}" Style="{StaticResource Soft}" FontAttributes="Bold" />
+                                <Label Text="{Binding Title}" FontAttributes="Bold" />
+                                <ProgressBar Progress="{Binding Coverage}" />
+                                <Label Text="{Binding ProgressText}" Style="{StaticResource Soft}" />
+                            </VerticalStackLayout>
+                        </Border>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </VerticalStackLayout>
+
+            <Button Text="{loc:Tr Ccse_PracticeAll}" Style="{StaticResource SecondaryButton}" Command="{Binding StartAllCommand}" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

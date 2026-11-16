@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Nacionalidad.App.ViewModels"
+             xmlns:loc="clr-namespace:Nacionalidad.App.Localization"
+             x:Class="Nacionalidad.App.Views.SettingsPage"
+             x:DataType="vm:SettingsViewModel"
+             Title="{loc:Tr Tab_Settings}">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="16">
+
+            <!-- Idioma -->
+            <Border Style="{StaticResource Card}">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="{loc:Tr Settings_Language}" Style="{StaticResource Subtitle}" />
+                    <Label Text="{loc:Tr Settings_LanguageHint}" Style="{StaticResource Soft}" />
+                    <VerticalStackLayout Spacing="6" BindableLayout.ItemsSource="{Binding Languages}">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate x:DataType="vm:LanguageItem">
+                                <Border StrokeShape="RoundRectangle 10" StrokeThickness="1.5" Padding="14,10"
+                                        Stroke="{AppThemeBinding Light={StaticResource CardStroke}, Dark={StaticResource CardStrokeDark}}">
+                                    <Border.Triggers>
+                                        <DataTrigger TargetType="Border" Binding="{Binding IsSelected}" Value="True">
+                                            <Setter Property="Stroke" Value="{StaticResource Primary}" />
+                                            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource ErrorBg}, Dark={StaticResource ErrorBgDark}}" />
+                                        </DataTrigger>
+                                    </Border.Triggers>
+                                    <Border.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding SelectLanguageCommand, Source={RelativeSource AncestorType={x:Type vm:SettingsViewModel}}, x:DataType=vm:SettingsViewModel}"
+                                                              CommandParameter="{Binding .}" />
+                                    </Border.GestureRecognizers>
+                                    <Grid ColumnDefinitions="*,Auto">
+                                        <Label Text="{Binding Name}" FontSize="18" FlowDirection="{Binding Direction}" />
+                                        <Label Grid.Column="1" Text="✓" FontSize="18" FontAttributes="Bold"
+                                               TextColor="{StaticResource Primary}" IsVisible="{Binding IsSelected}" />
+                                    </Grid>
+                                </Border>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Compras -->
+            <Border Style="{StaticResource Card}">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="{loc:Tr Settings_Purchases}" Style="{StaticResource Subtitle}" />
+                    <Label Text="{loc:Tr Settings_DeleOwned}" IsVisible="{Binding HasDelePass}" />
+                    <Button Text="{loc:Tr Settings_Restore}" Style="{StaticResource SecondaryButton}" Command="{Binding RestoreCommand}" />
+                    <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Acerca de -->
+            <Border Style="{StaticResource Card}">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="{loc:Tr Settings_About}" Style="{StaticResource Subtitle}" />
+                    <Label Text="{loc:Tr Settings_AboutText}" Style="{StaticResource Soft}" />
+                    <Label Text="{Binding VersionText}" Style="{StaticResource Soft}" />
+                    <Label Text="{Binding ContentVersionText}" Style="{StaticResource Soft}" />
+                </VerticalStackLayout>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

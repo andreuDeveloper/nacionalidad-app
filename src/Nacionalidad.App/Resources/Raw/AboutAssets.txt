@@ -1,0 +1,2 @@
+Ficheros que se empaquetan tal cual con la app (MauiAsset).
+Los bancos de preguntas están en ../../Content y se empaquetan como Content/<fichero>.json.

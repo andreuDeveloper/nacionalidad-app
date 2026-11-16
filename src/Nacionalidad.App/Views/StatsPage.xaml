@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Nacionalidad.App.ViewModels"
+             xmlns:loc="clr-namespace:Nacionalidad.App.Localization"
+             x:Class="Nacionalidad.App.Views.StatsPage"
+             x:DataType="vm:StatsViewModel"
+             Title="{loc:Tr Tab_Stats}">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="16">
+
+            <Label Text="{loc:Tr Stats_Title}" Style="{StaticResource Title}" />
+
+            <Border Style="{StaticResource Card}" IsVisible="{Binding HasData, Converter={StaticResource Not}}">
+                <Label Text="{loc:Tr Stats_Empty}" />
+            </Border>
+
+            <VerticalStackLayout Spacing="16" IsVisible="{Binding HasData}">
+
+                <!-- Preparación estimada -->
+                <Border Style="{StaticResource Card}">
+                    <VerticalStackLayout Spacing="6">
+                        <Label Text="{loc:Tr Stats_Readiness}" Style="{StaticResource Soft}" FontAttributes="Bold" />
+                        <Label Text="{Binding ReadinessText}" Style="{StaticResource Big}" />
+                        <ProgressBar Progress="{Binding Readiness}" />
+                        <Label Text="{loc:Tr Stats_ReadinessHint}" Style="{StaticResource Soft}" FontSize="12" />
+                    </VerticalStackLayout>
+                </Border>
+
+                <!-- Indicadores -->
+                <FlexLayout BindableLayout.ItemsSource="{Binding Tiles}" Wrap="Wrap" JustifyContent="SpaceBetween">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate x:DataType="vm:StatTile">
+                            <Border Style="{StaticResource Card}" FlexLayout.Basis="48%" Margin="0,0,0,12" Padding="14">
+                                <VerticalStackLayout Spacing="4">
+                                    <Label Text="{Binding Label}" Style="{StaticResource Soft}" />
+                                    <Label Text="{Binding Value}" FontSize="20" FontAttributes="Bold" />
+                                </VerticalStackLayout>
+                            </Border>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </FlexLayout>
+
+                <!-- Por tareas (barra = preguntas dominadas) -->
+                <Label Text="{loc:Tr Stats_ByTask}" Style="{StaticResource Subtitle}" />
+                <VerticalStackLayout Spacing="12" BindableLayout.ItemsSource="{Binding Categories}">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate x:DataType="vm:CategoryItem">
+                            <Border Style="{StaticResource Card}">
+                                <VerticalStackLayout Spacing="6">
+                                    <Label Text="{Binding Header}" Style="{StaticResource Soft}" FontAttributes="Bold" />
+                                    <Label Text="{Binding Title}" FontAttributes="Bold" />
+                                    <ProgressBar Progress="{Binding Coverage}" />
+                                    <Label Text="{Binding ProgressText}" Style="{StaticResource Soft}" />
+                                </VerticalStackLayout>
+                            </Border>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </VerticalStackLayout>
+
+                <Button Text="{loc:Tr Stats_Reset}" Style="{StaticResource SecondaryButton}" Command="{Binding ResetCommand}" Margin="0,16,0,0" />
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

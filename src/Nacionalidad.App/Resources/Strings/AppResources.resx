@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="AppName" xml:space="preserve"><value>Nacionalidad España</value></data>
+  <data name="Tab_Home" xml:space="preserve"><value>Inicio</value></data>
+  <data name="Tab_Stats" xml:space="preserve"><value>Progreso</value></data>
+  <data name="Tab_Settings" xml:space="preserve"><value>Ajustes</value></data>
+  <data name="Home_Greeting" xml:space="preserve"><value>Prepara tu nacionalidad española</value></data>
+  <data name="Home_Subtitle" xml:space="preserve"><value>Los dos exámenes que necesitas: CCSE y DELE A2.</value></data>
+  <data name="Home_CcseDesc" xml:space="preserve"><value>Conocimientos constitucionales y socioculturales de España. Las 300 preguntas del manual oficial, con explicaciones.</value></data>
+  <data name="Home_Free" xml:space="preserve"><value>GRATIS</value></data>
+  <data name="Home_DeleDesc" xml:space="preserve"><value>Examen de español del Instituto Cervantes: lectura, audio, escritura y conversación.</value></data>
+  <data name="Home_Soon" xml:space="preserve"><value>PRÓXIMAMENTE</value></data>
+  <data name="Home_Readiness" xml:space="preserve"><value>Tu preparación para el CCSE: {0}</value></data>
+  <data name="Common_Start" xml:space="preserve"><value>Empezar</value></data>
+  <data name="Common_Yes" xml:space="preserve"><value>Sí</value></data>
+  <data name="Common_No" xml:space="preserve"><value>No</value></data>
+  <data name="Common_Ok" xml:space="preserve"><value>Aceptar</value></data>
+  <data name="Common_Cancel" xml:space="preserve"><value>Cancelar</value></data>
+  <data name="Common_Error" xml:space="preserve"><value>Error</value></data>
+  <data name="Common_Loading" xml:space="preserve"><value>Cargando…</value></data>
+  <data name="Ccse_MockTitle" xml:space="preserve"><value>Simulacro de examen</value></data>
+  <data name="Ccse_MockDesc" xml:space="preserve"><value>{0} preguntas · {1} minutos · aprobado con {2} aciertos, como el examen real.</value></data>
+  <data name="Ccse_MockStart" xml:space="preserve"><value>Empezar simulacro</value></data>
+  <data name="Ccse_ReviewTitle" xml:space="preserve"><value>Repasar fallos</value></data>
+  <data name="Ccse_ReviewDesc" xml:space="preserve"><value>{0} preguntas pendientes de repaso.</value></data>
+  <data name="Ccse_ReviewEmpty" xml:space="preserve"><value>No tienes fallos pendientes. Las preguntas que falles aparecerán aquí hasta que las aciertes dos veces seguidas.</value></data>
+  <data name="Ccse_ReviewStart" xml:space="preserve"><value>Repasar</value></data>
+  <data name="Ccse_PracticeTitle" xml:space="preserve"><value>Practicar por tareas</value></data>
+  <data name="Ccse_PracticeAll" xml:space="preserve"><value>Todas las preguntas (aleatorio)</value></data>
+  <data name="Ccse_Task" xml:space="preserve"><value>Tarea {0}</value></data>
+  <data name="Ccse_TaskProgress" xml:space="preserve"><value>{0} de {1} vistas · {2} aciertos</value></data>
+  <data name="Cat_tarea1" xml:space="preserve"><value>Gobierno, legislación y participación ciudadana</value></data>
+  <data name="Cat_tarea2" xml:space="preserve"><value>Derechos y deberes fundamentales</value></data>
+  <data name="Cat_tarea3" xml:space="preserve"><value>Organización territorial y geografía</value></data>
+  <data name="Cat_tarea4" xml:space="preserve"><value>Cultura e historia de España</value></data>
+  <data name="Cat_tarea5" xml:space="preserve"><value>Sociedad española</value></data>
+  <data name="Quiz_Progress" xml:space="preserve"><value>Pregunta {0} de {1}</value></data>
+  <data name="Quiz_Next" xml:space="preserve"><value>Siguiente</value></data>
+  <data name="Quiz_Previous" xml:space="preserve"><value>Anterior</value></data>
+  <data name="Quiz_Finish" xml:space="preserve"><value>Terminar</value></data>
+  <data name="Quiz_Submit" xml:space="preserve"><value>Entregar</value></data>
+  <data name="Quiz_Correct" xml:space="preserve"><value>¡Correcto!</value></data>
+  <data name="Quiz_Incorrect" xml:space="preserve"><value>Incorrecto</value></data>
+  <data name="Quiz_CorrectAnswerIs" xml:space="preserve"><value>Respuesta correcta: {0}</value></data>
+  <data name="Quiz_Explanation" xml:space="preserve"><value>Explicación</value></data>
+  <data name="Quiz_ExplanationOnlySpanish" xml:space="preserve"><value>Esta explicación todavía no está traducida; se muestra en español.</value></data>
+  <data name="Quiz_Answered" xml:space="preserve"><value>{0}/{1} respondidas</value></data>
+  <data name="Quiz_ConfirmExitTitle" xml:space="preserve"><value>¿Salir?</value></data>
+  <data name="Quiz_ConfirmExitMock" xml:space="preserve"><value>Si sales ahora perderás este simulacro.</value></data>
+  <data name="Quiz_ConfirmExitPractice" xml:space="preserve"><value>Tus respuestas ya están guardadas. ¿Quieres terminar ahora?</value></data>
+  <data name="Quiz_ConfirmSubmitTitle" xml:space="preserve"><value>¿Entregar el examen?</value></data>
+  <data name="Quiz_ConfirmSubmitText" xml:space="preserve"><value>Has respondido {0} de {1} preguntas.</value></data>
+  <data name="Quiz_TimeUpTitle" xml:space="preserve"><value>Se acabó el tiempo</value></data>
+  <data name="Quiz_TimeUpText" xml:space="preserve"><value>El examen se ha entregado automáticamente.</value></data>
+  <data name="Quiz_MockHint" xml:space="preserve"><value>Puedes cambiar tus respuestas hasta entregar. Verás la corrección al final.</value></data>
+  <data name="Result_Passed" xml:space="preserve"><value>APTO</value></data>
+  <data name="Result_Failed" xml:space="preserve"><value>NO APTO</value></data>
+  <data name="Result_Score" xml:space="preserve"><value>{0} de {1} aciertos</value></data>
+  <data name="Result_PassMark" xml:space="preserve"><value>Para aprobar hacen falta {0} aciertos.</value></data>
+  <data name="Result_PracticeDone" xml:space="preserve"><value>Práctica terminada</value></data>
+  <data name="Result_Duration" xml:space="preserve"><value>Tiempo empleado: {0}</value></data>
+  <data name="Result_ByTask" xml:space="preserve"><value>Resultado por tareas</value></data>
+  <data name="Result_Mistakes" xml:space="preserve"><value>Preguntas falladas</value></data>
+  <data name="Result_NoMistakes" xml:space="preserve"><value>Ningún fallo. ¡Perfecto!</value></data>
+  <data name="Result_YourAnswer" xml:space="preserve"><value>Tu respuesta: {0}</value></data>
+  <data name="Result_NoAnswer" xml:space="preserve"><value>sin responder</value></data>
+  <data name="Result_ReviewMistakes" xml:space="preserve"><value>Repasar estos fallos</value></data>
+  <data name="Result_Again" xml:space="preserve"><value>Otro simulacro</value></data>
+  <data name="Result_Home" xml:space="preserve"><value>Volver</value></data>
+  <data name="Stats_Title" xml:space="preserve"><value>Tu progreso en el CCSE</value></data>
+  <data name="Stats_Readiness" xml:space="preserve"><value>Preparación estimada</value></data>
+  <data name="Stats_ReadinessHint" xml:space="preserve"><value>Combina las preguntas que dominas (acertadas 3 veces seguidas) y la nota de tu último simulacro.</value></data>
+  <data name="Stats_Seen" xml:space="preserve"><value>Vistas</value></data>
+  <data name="Stats_Mastered" xml:space="preserve"><value>Dominadas</value></data>
+  <data name="Stats_Accuracy" xml:space="preserve"><value>Aciertos</value></data>
+  <data name="Stats_Pending" xml:space="preserve"><value>Por repasar</value></data>
+  <data name="Stats_Mocks" xml:space="preserve"><value>Simulacros</value></data>
+  <data name="Stats_MocksPassed" xml:space="preserve"><value>{0} aprobados de {1}</value></data>
+  <data name="Stats_LastMock" xml:space="preserve"><value>Último: {0}</value></data>
+  <data name="Stats_Streak" xml:space="preserve"><value>Racha de estudio</value></data>
+  <data name="Stats_StreakDays" xml:space="preserve"><value>{0} días seguidos</value></data>
+  <data name="Stats_ByTask" xml:space="preserve"><value>Por tareas</value></data>
+  <data name="Stats_Empty" xml:space="preserve"><value>Todavía no has respondido ninguna pregunta. ¡Empieza a practicar!</value></data>
+  <data name="Stats_Reset" xml:space="preserve"><value>Borrar mi progreso del CCSE</value></data>
+  <data name="Stats_ResetConfirm" xml:space="preserve"><value>Se borrarán todas tus respuestas y simulacros. Esta acción no se puede deshacer.</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>Idioma</value></data>
+  <data name="Settings_LanguageHint" xml:space="preserve"><value>Idioma de la app y de las explicaciones. Las preguntas están siempre en español, como en el examen real.</value></data>
+  <data name="Settings_About" xml:space="preserve"><value>Acerca de</value></data>
+  <data name="Settings_AboutText" xml:space="preserve"><value>Las preguntas del CCSE proceden del Manual de preparación de la prueba CCSE 2026 publicado por el Instituto Cervantes. Las explicaciones son de elaboración propia. Esta app es independiente y no tiene relación oficial con el Instituto Cervantes.</value></data>
+  <data name="Settings_Version" xml:space="preserve"><value>Versión {0}</value></data>
+  <data name="Settings_ContentVersion" xml:space="preserve"><value>Banco de preguntas CCSE: {0}</value></data>
+  <data name="Settings_Purchases" xml:space="preserve"><value>Compras</value></data>
+  <data name="Settings_Restore" xml:space="preserve"><value>Restaurar compras</value></data>
+  <data name="Settings_RestoreNone" xml:space="preserve"><value>No se ha encontrado ninguna compra en esta cuenta de Google Play.</value></data>
+  <data name="Settings_RestoreOk" xml:space="preserve"><value>Pase DELE A2 restaurado. ¡Gracias!</value></data>
+  <data name="Settings_DeleOwned" xml:space="preserve"><value>Tienes el Pase DELE A2.</value></data>
+  <data name="Dele_Intro" xml:space="preserve"><value>El Pase DELE A2 incluirá todo lo necesario para aprobar el examen de español:</value></data>
+  <data name="Dele_FeatureReading" xml:space="preserve"><value>Comprensión lectora con corrección automática</value></data>
+  <data name="Dele_FeatureListening" xml:space="preserve"><value>Comprensión auditiva con audio a velocidad regulable</value></data>
+  <data name="Dele_FeatureWriting" xml:space="preserve"><value>Expresión escrita con textos modelo y autoevaluación</value></data>
+  <data name="Dele_FeatureSpeaking" xml:space="preserve"><value>Expresión oral: graba tu respuesta y compárala con el modelo</value></data>
+  <data name="Dele_FeatureExams" xml:space="preserve"><value>5 modelos de examen completos</value></data>
+  <data name="Dele_FeaturePlan" xml:space="preserve"><value>Plan de estudio según tu fecha de examen</value></data>
+  <data name="Dele_Price" xml:space="preserve"><value>Pago único. Sin suscripciones ni anuncios. Funciona sin conexión.</value></data>
+  <data name="Dele_Soon" xml:space="preserve"><value>Estamos preparando el contenido del DELE A2. Mientras tanto, prepara gratis el CCSE.</value></data>
+  <data name="Dele_GoCcse" xml:space="preserve"><value>Ir al CCSE</value></data>
+  <data name="Error_LoadBank" xml:space="preserve"><value>No se ha podido cargar el banco de preguntas.</value></data>
+</root>

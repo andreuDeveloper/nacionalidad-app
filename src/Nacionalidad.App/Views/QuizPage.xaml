@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Nacionalidad.App.ViewModels"
+             xmlns:loc="clr-namespace:Nacionalidad.App.Localization"
+             x:Class="Nacionalidad.App.Views.QuizPage"
+             x:DataType="vm:QuizViewModel"
+             Title="{Binding ProgressText}">
+
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior Command="{Binding ExitCommand}" />
+    </Shell.BackButtonBehavior>
+
+    <Grid RowDefinitions="Auto,*,Auto">
+
+        <!-- Cabecera: progreso y cronómetro -->
+        <VerticalStackLayout Padding="20,12,20,8" Spacing="6">
+            <Grid ColumnDefinitions="*,Auto">
+                <Label Text="{Binding CategoryText}" Style="{StaticResource Soft}" LineBreakMode="TailTruncation" VerticalOptions="Center" />
+                <Border Grid.Column="1" IsVisible="{Binding IsMock}" StrokeThickness="0" StrokeShape="RoundRectangle 8"
+                        Padding="10,4" BackgroundColor="{StaticResource Primary}">
+                    <Border.Triggers>
+                        <DataTrigger TargetType="Border" Binding="{Binding IsTimeLow}" Value="True">
+                            <Setter Property="BackgroundColor" Value="{StaticResource Accent}" />
+                        </DataTrigger>
+                    </Border.Triggers>
+                    <Label Text="{Binding TimeLeftText, StringFormat='⏱ {0}'}" FontAttributes="Bold" TextColor="White">
+                        <Label.Triggers>
+                            <DataTrigger TargetType="Label" Binding="{Binding IsTimeLow}" Value="True">
+                                <Setter Property="TextColor" Value="{StaticResource OnAccent}" />
+                            </DataTrigger>
+                        </Label.Triggers>
+                    </Label>
+                </Border>
+            </Grid>
+            <ProgressBar Progress="{Binding Progress}" />
+            <Label Text="{loc:Tr Quiz_MockHint}" Style="{StaticResource Soft}" FontSize="12" IsVisible="{Binding IsMock}" />
+        </VerticalStackLayout>
+
+        <!-- Pregunta, opciones y corrección -->
+        <ScrollView Grid.Row="1" x:Name="Scroller">
+            <VerticalStackLayout Padding="20,8,20,20" Spacing="12">
+
+                <!-- Las preguntas están en español: se muestran siempre de izquierda a derecha -->
+                <Label Text="{Binding QuestionText}" FontSize="20" FontAttributes="Bold" FlowDirection="LeftToRight" />
+
+                <VerticalStackLayout Spacing="10" BindableLayout.ItemsSource="{Binding Options}" FlowDirection="LeftToRight">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate x:DataType="vm:OptionItem">
+                            <Border StrokeShape="RoundRectangle 14" StrokeThickness="2" Padding="14,12"
+                                    BackgroundColor="{Binding State, Converter={StaticResource OptionBackground}}"
+                                    Stroke="{Binding State, Converter={StaticResource OptionStroke}}">
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding SelectCommand, Source={RelativeSource AncestorType={x:Type vm:QuizViewModel}}, x:DataType=vm:QuizViewModel}"
+                                                          CommandParameter="{Binding .}" />
+                                </Border.GestureRecognizers>
+                                <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                                    <Border WidthRequest="32" HeightRequest="32" StrokeThickness="0" StrokeShape="RoundRectangle 16"
+                                            BackgroundColor="{Binding State, Converter={StaticResource OptionBadge}}" VerticalOptions="Center">
+                                        <Label Text="{Binding Letter}" TextColor="White" FontAttributes="Bold"
+                                               HorizontalOptions="Center" VerticalOptions="Center" />
+                                    </Border>
+                                    <Label Grid.Column="1" Text="{Binding Text}" FontSize="17" VerticalOptions="Center" />
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </VerticalStackLayout>
+
+                <!-- Corrección inmediata (práctica y repaso) -->
+                <Border IsVisible="{Binding ShowFeedback}" StrokeThickness="0" StrokeShape="RoundRectangle 14" Padding="16"
+                        BackgroundColor="{Binding FeedbackIsCorrect, Converter={StaticResource ResultBackground}}">
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="{Binding FeedbackTitle}" FontSize="18" FontAttributes="Bold"
+                               TextColor="{Binding FeedbackIsCorrect, Converter={StaticResource ResultColor}}" />
+                        <Label Text="{Binding CorrectAnswerText}" FontAttributes="Bold" FlowDirection="LeftToRight"
+                               IsVisible="{Binding FeedbackIsCorrect, Converter={StaticResource Not}}" />
+                        <VerticalStackLayout Spacing="4" IsVisible="{Binding HasExplanation}">
+                            <Label Text="{loc:Tr Quiz_Explanation}" Style="{StaticResource Soft}" FontAttributes="Bold" />
+                            <Label Text="{Binding ExplanationText}" FlowDirection="{Binding ExplanationDirection}" />
+                            <Label Text="{loc:Tr Quiz_ExplanationOnlySpanish}" Style="{StaticResource Soft}" FontSize="12"
+                                   IsVisible="{Binding ExplanationNotTranslated}" />
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Border>
+
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- Navegación -->
+        <Grid Grid.Row="2" Padding="20,8,20,16" ColumnDefinitions="*,*" ColumnSpacing="12" RowDefinitions="Auto,Auto" RowSpacing="8">
+            <Label Grid.ColumnSpan="2" Text="{Binding AnsweredText}" Style="{StaticResource Soft}" HorizontalOptions="Center"
+                   IsVisible="{Binding IsMock}" />
+
+            <!-- Simulacro: anterior / siguiente / entregar -->
+            <Button Grid.Row="1" Text="{loc:Tr Quiz_Previous}" Style="{StaticResource SecondaryButton}"
+                    Command="{Binding PreviousCommand}" IsEnabled="{Binding CanGoPrevious}" IsVisible="{Binding IsMock}" />
+            <Button Grid.Row="1" Grid.Column="1" Text="{loc:Tr Quiz_Next}"
+                    Command="{Binding NextCommand}" IsVisible="{Binding IsMock}">
+                <Button.Triggers>
+                    <DataTrigger TargetType="Button" Binding="{Binding IsLast}" Value="True">
+                        <Setter Property="Text" Value="{loc:Tr Quiz_Submit}" />
+                        <Setter Property="Style" Value="{StaticResource AccentButton}" />
+                    </DataTrigger>
+                </Button.Triggers>
+            </Button>
+
+            <!-- Práctica: siguiente / terminar (tras responder) -->
+            <Button Grid.Row="1" Grid.ColumnSpan="2" Text="{loc:Tr Quiz_Next}"
+                    Command="{Binding NextCommand}" IsEnabled="{Binding CanGoNext}"
+                    IsVisible="{Binding IsMock, Converter={StaticResource Not}}">
+                <Button.Triggers>
+                    <DataTrigger TargetType="Button" Binding="{Binding IsLast}" Value="True">
+                        <Setter Property="Text" Value="{loc:Tr Quiz_Finish}" />
+                    </DataTrigger>
+                </Button.Triggers>
+            </Button>
+        </Grid>
+    </Grid>
+</ContentPage>

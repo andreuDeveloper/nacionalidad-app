@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <!-- Paleta inspirada en la bandera: rojo y amarillo, con neutros cálidos -->
+    <Color x:Key="Primary">#C60B1E</Color>
+    <Color x:Key="PrimaryDark">#E8505E</Color>
+    <Color x:Key="OnPrimary">#FFFFFF</Color>
+    <Color x:Key="Accent">#FFC400</Color>
+    <Color x:Key="OnAccent">#3A2A00</Color>
+
+    <Color x:Key="Success">#1E8E3E</Color>
+    <Color x:Key="SuccessDark">#5BD27A</Color>
+    <Color x:Key="SuccessBg">#E6F4EA</Color>
+    <Color x:Key="SuccessBgDark">#173A22</Color>
+    <Color x:Key="Error">#C5221F</Color>
+    <Color x:Key="ErrorDark">#FF8A80</Color>
+    <Color x:Key="ErrorBg">#FCE8E6</Color>
+    <Color x:Key="ErrorBgDark">#4A1D1B</Color>
+
+    <Color x:Key="PageBg">#F7F5F2</Color>
+    <Color x:Key="PageBgDark">#121212</Color>
+    <Color x:Key="CardBg">#FFFFFF</Color>
+    <Color x:Key="CardBgDark">#1F1F1F</Color>
+    <Color x:Key="CardStroke">#E4E0DA</Color>
+    <Color x:Key="CardStrokeDark">#333333</Color>
+    <Color x:Key="TextMain">#1C1B1A</Color>
+    <Color x:Key="TextMainDark">#F2F2F2</Color>
+    <Color x:Key="TextSoft">#5F5B55</Color>
+    <Color x:Key="TextSoftDark">#B5B5B5</Color>
+    <Color x:Key="Locked">#8A8580</Color>
+
+    <Color x:Key="White">White</Color>
+    <Color x:Key="Black">Black</Color>
+</ResourceDictionary>

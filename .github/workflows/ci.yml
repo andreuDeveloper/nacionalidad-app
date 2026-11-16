@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  core:
+    name: Motor y contenido
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Tests de ExamEngine.Core (incluye validación de los bancos JSON)
+        run: dotnet test tests/ExamEngine.Core.Tests --configuration Release
+      - name: Traducciones de la interfaz completas
+        run: python3 tools/i18n/check_resx.py src/Nacionalidad.App/Resources/Strings
+
+  android:
+    name: App Android
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: microsoft
+          java-version: '21'
+      - name: Workload MAUI Android
+        run: dotnet workload install maui-android
+      - name: Compilar
+        run: dotnet build src/Nacionalidad.App/Nacionalidad.App.csproj -f net10.0-android --configuration Release

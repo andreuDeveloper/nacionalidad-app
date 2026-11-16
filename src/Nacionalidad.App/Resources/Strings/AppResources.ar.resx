@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="AppName" xml:space="preserve"><value>الجنسية الإسبانية</value></data>
+  <data name="Tab_Home" xml:space="preserve"><value>الرئيسية</value></data>
+  <data name="Tab_Stats" xml:space="preserve"><value>التقدّم</value></data>
+  <data name="Tab_Settings" xml:space="preserve"><value>الإعدادات</value></data>
+  <data name="Home_Greeting" xml:space="preserve"><value>استعدّ للحصول على الجنسية الإسبانية</value></data>
+  <data name="Home_Subtitle" xml:space="preserve"><value>الامتحانان اللذان تحتاجهما: CCSE و DELE A2.</value></data>
+  <data name="Home_CcseDesc" xml:space="preserve"><value>المعارف الدستورية والاجتماعية والثقافية لإسبانيا. جميع الأسئلة الـ300 من الدليل الرسمي مع الشروح.</value></data>
+  <data name="Home_Free" xml:space="preserve"><value>مجاني</value></data>
+  <data name="Home_DeleDesc" xml:space="preserve"><value>امتحان اللغة الإسبانية من معهد ثربانتس: القراءة والاستماع والكتابة والمحادثة.</value></data>
+  <data name="Home_Soon" xml:space="preserve"><value>قريبًا</value></data>
+  <data name="Home_Readiness" xml:space="preserve"><value>مدى استعدادك لامتحان CCSE: {0}</value></data>
+  <data name="Common_Start" xml:space="preserve"><value>ابدأ</value></data>
+  <data name="Common_Yes" xml:space="preserve"><value>نعم</value></data>
+  <data name="Common_No" xml:space="preserve"><value>لا</value></data>
+  <data name="Common_Ok" xml:space="preserve"><value>موافق</value></data>
+  <data name="Common_Cancel" xml:space="preserve"><value>إلغاء</value></data>
+  <data name="Common_Error" xml:space="preserve"><value>خطأ</value></data>
+  <data name="Common_Loading" xml:space="preserve"><value>جارٍ التحميل…</value></data>
+  <data name="Ccse_MockTitle" xml:space="preserve"><value>امتحان تجريبي</value></data>
+  <data name="Ccse_MockDesc" xml:space="preserve"><value>{0} سؤالًا · {1} دقيقة · النجاح بـ{2} إجابة صحيحة، مثل الامتحان الحقيقي.</value></data>
+  <data name="Ccse_MockStart" xml:space="preserve"><value>ابدأ الامتحان التجريبي</value></data>
+  <data name="Ccse_ReviewTitle" xml:space="preserve"><value>مراجعة الأخطاء</value></data>
+  <data name="Ccse_ReviewDesc" xml:space="preserve"><value>{0} سؤالًا بانتظار المراجعة.</value></data>
+  <data name="Ccse_ReviewEmpty" xml:space="preserve"><value>لا توجد أخطاء معلّقة. ستظهر هنا الأسئلة التي تخطئ فيها حتى تجيب عنها إجابة صحيحة مرتين متتاليتين.</value></data>
+  <data name="Ccse_ReviewStart" xml:space="preserve"><value>راجِع</value></data>
+  <data name="Ccse_PracticeTitle" xml:space="preserve"><value>التدرّب حسب الأقسام</value></data>
+  <data name="Ccse_PracticeAll" xml:space="preserve"><value>كل الأسئلة (عشوائيًا)</value></data>
+  <data name="Ccse_Task" xml:space="preserve"><value>القسم {0}</value></data>
+  <data name="Ccse_TaskProgress" xml:space="preserve"><value>شوهد {0} من {1} · {2} إجابات صحيحة</value></data>
+  <data name="Cat_tarea1" xml:space="preserve"><value>الحكومة والتشريع والمشاركة المدنية</value></data>
+  <data name="Cat_tarea2" xml:space="preserve"><value>الحقوق والواجبات الأساسية</value></data>
+  <data name="Cat_tarea3" xml:space="preserve"><value>التنظيم الإقليمي والجغرافيا</value></data>
+  <data name="Cat_tarea4" xml:space="preserve"><value>ثقافة إسبانيا وتاريخها</value></data>
+  <data name="Cat_tarea5" xml:space="preserve"><value>المجتمع الإسباني</value></data>
+  <data name="Quiz_Progress" xml:space="preserve"><value>السؤال {0} من {1}</value></data>
+  <data name="Quiz_Next" xml:space="preserve"><value>التالي</value></data>
+  <data name="Quiz_Previous" xml:space="preserve"><value>السابق</value></data>
+  <data name="Quiz_Finish" xml:space="preserve"><value>إنهاء</value></data>
+  <data name="Quiz_Submit" xml:space="preserve"><value>تسليم</value></data>
+  <data name="Quiz_Correct" xml:space="preserve"><value>إجابة صحيحة!</value></data>
+  <data name="Quiz_Incorrect" xml:space="preserve"><value>إجابة خاطئة</value></data>
+  <data name="Quiz_CorrectAnswerIs" xml:space="preserve"><value>الإجابة الصحيحة: {0}</value></data>
+  <data name="Quiz_Explanation" xml:space="preserve"><value>الشرح</value></data>
+  <data name="Quiz_ExplanationOnlySpanish" xml:space="preserve"><value>هذا الشرح غير مترجم بعد، لذا يُعرض بالإسبانية.</value></data>
+  <data name="Quiz_Answered" xml:space="preserve"><value>تمت الإجابة عن {0}/{1}</value></data>
+  <data name="Quiz_ConfirmExitTitle" xml:space="preserve"><value>هل تريد الخروج؟</value></data>
+  <data name="Quiz_ConfirmExitMock" xml:space="preserve"><value>إذا خرجت الآن فستفقد هذا الامتحان التجريبي.</value></data>
+  <data name="Quiz_ConfirmExitPractice" xml:space="preserve"><value>تم حفظ إجاباتك بالفعل. هل تريد الإنهاء الآن؟</value></data>
+  <data name="Quiz_ConfirmSubmitTitle" xml:space="preserve"><value>هل تريد تسليم الامتحان؟</value></data>
+  <data name="Quiz_ConfirmSubmitText" xml:space="preserve"><value>أجبت عن {0} من أصل {1} سؤالًا.</value></data>
+  <data name="Quiz_TimeUpTitle" xml:space="preserve"><value>انتهى الوقت</value></data>
+  <data name="Quiz_TimeUpText" xml:space="preserve"><value>تم تسليم الامتحان تلقائيًا.</value></data>
+  <data name="Quiz_MockHint" xml:space="preserve"><value>يمكنك تغيير إجاباتك حتى التسليم. ستظهر النتيجة في النهاية.</value></data>
+  <data name="Result_Passed" xml:space="preserve"><value>ناجح</value></data>
+  <data name="Result_Failed" xml:space="preserve"><value>راسب</value></data>
+  <data name="Result_Score" xml:space="preserve"><value>{0} إجابة صحيحة من {1}</value></data>
+  <data name="Result_PassMark" xml:space="preserve"><value>تحتاج إلى {0} إجابة صحيحة للنجاح.</value></data>
+  <data name="Result_PracticeDone" xml:space="preserve"><value>انتهى التدريب</value></data>
+  <data name="Result_Duration" xml:space="preserve"><value>الوقت المستغرق: {0}</value></data>
+  <data name="Result_ByTask" xml:space="preserve"><value>النتائج حسب الأقسام</value></data>
+  <data name="Result_Mistakes" xml:space="preserve"><value>الأسئلة التي أخطأت فيها</value></data>
+  <data name="Result_NoMistakes" xml:space="preserve"><value>لا أخطاء. ممتاز!</value></data>
+  <data name="Result_YourAnswer" xml:space="preserve"><value>إجابتك: {0}</value></data>
+  <data name="Result_NoAnswer" xml:space="preserve"><value>بلا إجابة</value></data>
+  <data name="Result_ReviewMistakes" xml:space="preserve"><value>راجع هذه الأخطاء</value></data>
+  <data name="Result_Again" xml:space="preserve"><value>امتحان تجريبي آخر</value></data>
+  <data name="Result_Home" xml:space="preserve"><value>رجوع</value></data>
+  <data name="Stats_Title" xml:space="preserve"><value>تقدّمك في CCSE</value></data>
+  <data name="Stats_Readiness" xml:space="preserve"><value>الاستعداد التقديري</value></data>
+  <data name="Stats_ReadinessHint" xml:space="preserve"><value>يجمع بين الأسئلة التي أتقنتها (3 إجابات صحيحة متتالية) ونتيجة آخر امتحان تجريبي.</value></data>
+  <data name="Stats_Seen" xml:space="preserve"><value>تمت رؤيتها</value></data>
+  <data name="Stats_Mastered" xml:space="preserve"><value>متقَنة</value></data>
+  <data name="Stats_Accuracy" xml:space="preserve"><value>نسبة الصواب</value></data>
+  <data name="Stats_Pending" xml:space="preserve"><value>للمراجعة</value></data>
+  <data name="Stats_Mocks" xml:space="preserve"><value>الامتحانات التجريبية</value></data>
+  <data name="Stats_MocksPassed" xml:space="preserve"><value>نجحت في {0} من {1}</value></data>
+  <data name="Stats_LastMock" xml:space="preserve"><value>الأخير: {0}</value></data>
+  <data name="Stats_Streak" xml:space="preserve"><value>أيام الدراسة المتتالية</value></data>
+  <data name="Stats_StreakDays" xml:space="preserve"><value>{0} أيام متتالية</value></data>
+  <data name="Stats_ByTask" xml:space="preserve"><value>حسب الأقسام</value></data>
+  <data name="Stats_Empty" xml:space="preserve"><value>لم تُجب عن أي سؤال بعد. ابدأ التدريب!</value></data>
+  <data name="Stats_Reset" xml:space="preserve"><value>حذف تقدّمي في CCSE</value></data>
+  <data name="Stats_ResetConfirm" xml:space="preserve"><value>سيتم حذف جميع إجاباتك وامتحاناتك التجريبية. لا يمكن التراجع عن ذلك.</value></data>
+  <data name="Settings_Language" xml:space="preserve"><value>اللغة</value></data>
+  <data name="Settings_LanguageHint" xml:space="preserve"><value>لغة التطبيق والشروح. الأسئلة دائمًا بالإسبانية كما في الامتحان الحقيقي.</value></data>
+  <data name="Settings_About" xml:space="preserve"><value>حول التطبيق</value></data>
+  <data name="Settings_AboutText" xml:space="preserve"><value>أسئلة CCSE مأخوذة من دليل التحضير لامتحان CCSE 2026 الذي نشره معهد ثربانتس. الشروح من إعدادنا. هذا التطبيق مستقل ولا تربطه أي علاقة رسمية بمعهد ثربانتس.</value></data>
+  <data name="Settings_Version" xml:space="preserve"><value>الإصدار {0}</value></data>
+  <data name="Settings_ContentVersion" xml:space="preserve"><value>بنك أسئلة CCSE: {0}</value></data>
+  <data name="Settings_Purchases" xml:space="preserve"><value>المشتريات</value></data>
+  <data name="Settings_Restore" xml:space="preserve"><value>استعادة المشتريات</value></data>
+  <data name="Settings_RestoreNone" xml:space="preserve"><value>لم يتم العثور على أي مشتريات في حساب Google Play هذا.</value></data>
+  <data name="Settings_RestoreOk" xml:space="preserve"><value>تمت استعادة باقة DELE A2. شكرًا!</value></data>
+  <data name="Settings_DeleOwned" xml:space="preserve"><value>لديك باقة DELE A2.</value></data>
+  <data name="Dele_Intro" xml:space="preserve"><value>ستتضمن باقة DELE A2 كل ما تحتاجه للنجاح في امتحان اللغة الإسبانية:</value></data>
+  <data name="Dele_FeatureReading" xml:space="preserve"><value>فهم المقروء مع تصحيح تلقائي</value></data>
+  <data name="Dele_FeatureListening" xml:space="preserve"><value>فهم المسموع مع إمكانية ضبط سرعة الصوت</value></data>
+  <data name="Dele_FeatureWriting" xml:space="preserve"><value>التعبير الكتابي مع نصوص نموذجية وتقييم ذاتي</value></data>
+  <data name="Dele_FeatureSpeaking" xml:space="preserve"><value>التعبير الشفهي: سجّل إجابتك وقارنها بالنموذج</value></data>
+  <data name="Dele_FeatureExams" xml:space="preserve"><value>5 نماذج امتحان كاملة</value></data>
+  <data name="Dele_FeaturePlan" xml:space="preserve"><value>خطة دراسة حسب موعد امتحانك</value></data>
+  <data name="Dele_Price" xml:space="preserve"><value>دفعة واحدة. بلا اشتراكات ولا إعلانات. يعمل دون اتصال.</value></data>
+  <data name="Dele_Soon" xml:space="preserve"><value>نعمل على إعداد محتوى DELE A2. في هذه الأثناء، استعد مجانًا لامتحان CCSE.</value></data>
+  <data name="Dele_GoCcse" xml:space="preserve"><value>انتقل إلى CCSE</value></data>
+  <data name="Error_LoadBank" xml:space="preserve"><value>تعذّر تحميل بنك الأسئلة.</value></data>
+</root>

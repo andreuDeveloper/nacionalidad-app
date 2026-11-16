@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Nacionalidad.App.ViewModels"
+             xmlns:loc="clr-namespace:Nacionalidad.App.Localization"
+             x:Class="Nacionalidad.App.Views.ResultPage"
+             x:DataType="vm:ResultViewModel"
+             Title="{Binding Headline}">
+
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior Command="{Binding CloseCommand}" />
+    </Shell.BackButtonBehavior>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="16">
+
+            <!-- Veredicto -->
+            <Border StrokeThickness="0" StrokeShape="RoundRectangle 16" Padding="20"
+                    BackgroundColor="{Binding Passed, Converter={StaticResource ResultBackground}}">
+                <Border.Triggers>
+                    <DataTrigger TargetType="Border" Binding="{Binding HasVerdict}" Value="False">
+                        <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource CardBg}, Dark={StaticResource CardBgDark}}" />
+                    </DataTrigger>
+                </Border.Triggers>
+                <VerticalStackLayout Spacing="6" HorizontalOptions="Center">
+                    <Label Text="{Binding Headline}" FontSize="34" FontAttributes="Bold" HorizontalOptions="Center"
+                           TextColor="{Binding Passed, Converter={StaticResource ResultColor}}">
+                        <Label.Triggers>
+                            <DataTrigger TargetType="Label" Binding="{Binding HasVerdict}" Value="False">
+                                <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource TextMain}, Dark={StaticResource TextMainDark}}" />
+                                <Setter Property="FontSize" Value="26" />
+                            </DataTrigger>
+                        </Label.Triggers>
+                    </Label>
+                    <Label Text="{Binding ScoreText}" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center" />
+                    <Label Text="{Binding PassMarkText}" Style="{StaticResource Soft}" HorizontalOptions="Center"
+                           IsVisible="{Binding PassMarkText, Converter={StaticResource HasText}}" />
+                    <Label Text="{Binding DurationText}" Style="{StaticResource Soft}" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Por tareas -->
+            <Border Style="{StaticResource Card}">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="{loc:Tr Result_ByTask}" Style="{StaticResource Subtitle}" />
+                    <VerticalStackLayout Spacing="10" BindableLayout.ItemsSource="{Binding ByCategory}">
+                        <BindableLayout.ItemTemplate>
+                            <DataTemplate x:DataType="vm:CategoryResultItem">
+                                <Grid ColumnDefinitions="*,Auto" RowDefinitions="Auto,Auto" RowSpacing="4">
+                                    <Label Text="{Binding Title}" FontSize="14" />
+                                    <Label Grid.Column="1" Text="{Binding Score}" FontAttributes="Bold" />
+                                    <ProgressBar Grid.Row="1" Grid.ColumnSpan="2" Progress="{Binding Ratio}" />
+                                </Grid>
+                            </DataTemplate>
+                        </BindableLayout.ItemTemplate>
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Acciones -->
+            <Button Text="{loc:Tr Result_ReviewMistakes}" Command="{Binding ReviewMistakesCommand}" IsVisible="{Binding HasMistakes}" />
+            <Button Text="{loc:Tr Result_Again}" Style="{StaticResource AccentButton}" Command="{Binding AgainCommand}" IsVisible="{Binding IsMock}" />
+            <Button Text="{loc:Tr Result_Home}" Style="{StaticResource SecondaryButton}" Command="{Binding CloseCommand}" />
+
+            <!-- Fallos con explicación -->
+            <Label Text="{loc:Tr Result_Mistakes}" Style="{StaticResource Subtitle}" IsVisible="{Binding HasMistakes}" />
+            <Label Text="{loc:Tr Result_NoMistakes}" Style="{StaticResource Subtitle}" IsVisible="{Binding HasMistakes, Converter={StaticResource Not}}" />
+
+            <VerticalStackLayout Spacing="12" BindableLayout.ItemsSource="{Binding Mistakes}">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate x:DataType="vm:MistakeItem">
+                        <Border Style="{StaticResource Card}">
+                            <VerticalStackLayout Spacing="6">
+                                <Label Text="{Binding Question}" FontAttributes="Bold" FlowDirection="LeftToRight" />
+                                <Label Text="{Binding YourAnswer}" TextColor="{AppThemeBinding Light={StaticResource Error}, Dark={StaticResource ErrorDark}}" />
+                                <Label Text="{Binding CorrectAnswer}" FontAttributes="Bold" TextColor="{AppThemeBinding Light={StaticResource Success}, Dark={StaticResource SuccessDark}}" />
+                                <Label Text="{Binding Explanation}" Style="{StaticResource Soft}" IsVisible="{Binding HasExplanation}"
+                                       FlowDirection="{Binding ExplanationDirection}" />
+                            </VerticalStackLayout>
+                        </Border>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

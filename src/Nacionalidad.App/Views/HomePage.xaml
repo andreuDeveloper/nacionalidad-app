@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Nacionalidad.App.ViewModels"
+             xmlns:loc="clr-namespace:Nacionalidad.App.Localization"
+             x:Class="Nacionalidad.App.Views.HomePage"
+             x:DataType="vm:HomeViewModel"
+             Title="{loc:Tr AppName}">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="16">
+
+            <Label Text="{loc:Tr Home_Greeting}" Style="{StaticResource Title}" />
+            <Label Text="{loc:Tr Home_Subtitle}" Style="{StaticResource Soft}" />
+
+            <!-- Preparación -->
+            <Border Style="{StaticResource Card}" IsVisible="{Binding HasProgress}">
+                <VerticalStackLayout Spacing="8">
+                    <Label Text="{Binding ReadinessText}" FontAttributes="Bold" />
+                    <ProgressBar Progress="{Binding Readiness}" />
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- CCSE -->
+            <Border Style="{StaticResource Card}">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OpenCcseCommand}" />
+                </Border.GestureRecognizers>
+                <Grid ColumnDefinitions="*,Auto" RowDefinitions="Auto,Auto,Auto" RowSpacing="8">
+                    <Label Text="CCSE 2026" Style="{StaticResource Subtitle}" />
+                    <Border Grid.Column="1" BackgroundColor="{StaticResource Success}" StrokeThickness="0"
+                            StrokeShape="RoundRectangle 8" Padding="10,4" VerticalOptions="Center">
+                        <Label Text="{loc:Tr Home_Free}" TextColor="White" FontSize="12" FontAttributes="Bold" />
+                    </Border>
+                    <Label Grid.Row="1" Grid.ColumnSpan="2" Text="{loc:Tr Home_CcseDesc}" Style="{StaticResource Soft}" />
+                    <Button Grid.Row="2" Grid.ColumnSpan="2" Text="{loc:Tr Common_Start}" Command="{Binding OpenCcseCommand}" />
+                </Grid>
+            </Border>
+
+            <!-- DELE A2 -->
+            <Border Style="{StaticResource Card}">
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OpenDeleCommand}" />
+                </Border.GestureRecognizers>
+                <Grid ColumnDefinitions="*,Auto" RowDefinitions="Auto,Auto" RowSpacing="8">
+                    <Label Text="DELE A2" Style="{StaticResource Subtitle}" />
+                    <Border Grid.Column="1" BackgroundColor="{StaticResource Accent}" StrokeThickness="0"
+                            StrokeShape="RoundRectangle 8" Padding="10,4" VerticalOptions="Center">
+                        <Label Text="{loc:Tr Home_Soon}" TextColor="{StaticResource OnAccent}" FontSize="12" FontAttributes="Bold" />
+                    </Border>
+                    <Label Grid.Row="1" Grid.ColumnSpan="2" Text="{loc:Tr Home_DeleDesc}" Style="{StaticResource Soft}" />
+                </Grid>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="456" height="456" viewBox="0 0 456 456" xmlns="http://www.w3.org/2000/svg">
+  <!-- Libro abierto con marca de verificación -->
+  <path d="M118 150 Q178 128 228 156 L228 312 Q178 286 118 306 Z" fill="#FFFFFF" stroke="#7A0612" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M338 150 Q278 128 228 156 L228 312 Q278 286 338 306 Z" fill="#FFFFFF" stroke="#7A0612" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M250 232 L278 262 L330 198" fill="none" stroke="#C60B1E" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
